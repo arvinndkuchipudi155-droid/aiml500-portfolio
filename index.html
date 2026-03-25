@@ -185,6 +185,7 @@
         <button class="dropdown-item" onclick="goTo('artifacts');scrollToCard('card-timeline')">AI/ML Timeline</button>
         <button class="dropdown-item" onclick="goTo('artifacts');scrollToCard('card-chatbot')">Leadership Chatbot</button>
         <button class="dropdown-item" onclick="goTo('artifacts');scrollToCard('card-report')">ML vs DL Report</button>
+        <button class="dropdown-item" onclick="goTo('artifacts');scrollToCard('card-scenarios')">AI/ML Data Challenges</button>
       </div>
     </div>
   </div>
@@ -461,6 +462,156 @@
       </div>
     </div>
 
+    <!-- ARTIFACT 4: AI/ML DATA CHALLENGES PRESENTATION -->
+    <div class="art-card reveal" id="card-scenarios" style="transition-delay:0.3s">
+      <div class="art-card-header">
+        <span class="art-card-num">Artifact 04</span>
+        <div class="art-card-divider"></div>
+        <span class="art-card-type">Interactive Presentation</span>
+      </div>
+      <div class="art-card-body">
+        <h2 class="art-card-title">AI/ML Data Challenges: School Bot Simulation</h2>
+        <p class="art-card-desc">
+          A three-scenario walkthrough conducted with a school AI chatbot as part of AIML-500 coursework.
+          Each scenario presented a real data challenge — <strong>missing data</strong>, <strong>class imbalance</strong>,
+          and <strong>data privacy &amp; ethics</strong> — requiring applied reasoning and solution design.
+          Responses demonstrate practical understanding of ML preprocessing, fairness, and responsible AI principles.
+        </p>
+
+        <!-- SLIDE DECK -->
+        <div class="art-preview">
+          <div class="art-preview-label">Presentation Slides — 3 Scenarios</div>
+
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:16px;">
+            <button onclick="showSlide(1)" id="dot-1" style="width:28px;height:28px;border-radius:50%;background:var(--navy);color:#c9a84c;font-size:11px;font-weight:700;border:none;cursor:pointer;font-family:'Merriweather',serif;">1</button>
+            <button onclick="showSlide(2)" id="dot-2" style="width:28px;height:28px;border-radius:50%;background:var(--border);color:var(--navy);font-size:11px;font-weight:700;border:none;cursor:pointer;font-family:'Merriweather',serif;">2</button>
+            <button onclick="showSlide(3)" id="dot-3" style="width:28px;height:28px;border-radius:50%;background:var(--border);color:var(--navy);font-size:11px;font-weight:700;border:none;cursor:pointer;font-family:'Merriweather',serif;">3</button>
+            <span style="margin-left:auto;font-size:12px;color:var(--muted);">Click dots or arrows to navigate</span>
+          </div>
+
+          <!-- SLIDE 1 -->
+          <div id="slide-1" class="scenario-slide" style="display:block;">
+            <div style="background:linear-gradient(135deg,#1a2744 0%,#2c4a8c 100%);border-radius:10px;padding:24px 28px;color:#fff;margin-bottom:12px;">
+              <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+                <div style="width:44px;height:44px;border-radius:10px;background:rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">🏠</div>
+                <div>
+                  <div style="font-size:10px;letter-spacing:2px;color:#c9a84c;text-transform:uppercase;font-weight:700;margin-bottom:3px;">Scenario 01 · Missing Data</div>
+                  <div style="font-size:17px;font-weight:700;font-family:'Merriweather',serif;line-height:1.25;">Handling Missing Values in Housing Price Prediction</div>
+                </div>
+              </div>
+              <div style="font-size:13px;color:rgba(255,255,255,0.7);line-height:1.7;margin-bottom:18px;">Dataset had missing entries for key features — number of bedrooms and square footage — in a house price prediction model.</div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+                <div style="background:rgba(255,255,255,0.08);border-radius:8px;padding:12px 14px;">
+                  <div style="font-size:10px;color:#c9a84c;font-weight:700;letter-spacing:1px;margin-bottom:6px;">⚡ APPROACH</div>
+                  <div style="font-size:12.5px;color:rgba(255,255,255,0.85);line-height:1.6;">Assess extent &amp; pattern of missingness first, then choose between row removal or imputation based on proportion of missing values.</div>
+                </div>
+                <div style="background:rgba(255,255,255,0.08);border-radius:8px;padding:12px 14px;">
+                  <div style="font-size:10px;color:#c9a84c;font-weight:700;letter-spacing:1px;margin-bottom:6px;">🔧 TECHNIQUES</div>
+                  <div style="font-size:12.5px;color:rgba(255,255,255,0.85);line-height:1.6;">Mean/median for numeric; mode or predictive imputation for categorical; regression imputation for large datasets.</div>
+                </div>
+              </div>
+            </div>
+            <div style="background:#f0f4ff;border:1px solid #c7d4f0;border-left:4px solid #2c4a8c;border-radius:8px;padding:14px 16px;">
+              <div style="font-size:11px;font-weight:700;color:var(--navy);margin-bottom:6px;">💬 Key Insight from Bot Feedback</div>
+              <div style="font-size:13px;color:var(--light);line-height:1.7;">Start with simple baseline imputation before advancing to predictive models. Understanding <em>why</em> data is missing matters just as much as how to fill it — non-random missingness introduces systematic bias.</div>
+            </div>
+          </div>
+
+          <!-- SLIDE 2 -->
+          <div id="slide-2" class="scenario-slide" style="display:none;">
+            <div style="background:linear-gradient(135deg,#14532d 0%,#166534 100%);border-radius:10px;padding:24px 28px;color:#fff;margin-bottom:12px;">
+              <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+                <div style="width:44px;height:44px;border-radius:10px;background:rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">🐾</div>
+                <div>
+                  <div style="font-size:10px;letter-spacing:2px;color:#86efac;text-transform:uppercase;font-weight:700;margin-bottom:3px;">Scenario 02 · Class Imbalance</div>
+                  <div style="font-size:17px;font-weight:700;font-family:'Merriweather',serif;line-height:1.25;">Addressing Imbalanced Classes in Animal Image Classification</div>
+                </div>
+              </div>
+              <div style="font-size:13px;color:rgba(255,255,255,0.7);line-height:1.7;margin-bottom:18px;">Dataset had far more images of cats and dogs than birds or reptiles, risking a model biased toward predicting majority classes.</div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+                <div style="background:rgba(255,255,255,0.08);border-radius:8px;padding:12px 14px;">
+                  <div style="font-size:10px;color:#86efac;font-weight:700;letter-spacing:1px;margin-bottom:6px;">⚡ APPROACH</div>
+                  <div style="font-size:12.5px;color:rgba(255,255,255,0.85);line-height:1.6;">Combine resampling with class weighting. Replace accuracy with precision, recall, and F1-score as primary evaluation metrics.</div>
+                </div>
+                <div style="background:rgba(255,255,255,0.08);border-radius:8px;padding:12px 14px;">
+                  <div style="font-size:10px;color:#86efac;font-weight:700;letter-spacing:1px;margin-bottom:6px;">🔧 TECHNIQUES</div>
+                  <div style="font-size:12.5px;color:rgba(255,255,255,0.85);line-height:1.6;">Data augmentation (flip, rotate, brightness); undersampling majority; class weighting in loss function; SMOTE for synthetic minority samples.</div>
+                </div>
+              </div>
+            </div>
+            <div style="background:#f0fff4;border:1px solid #a7f3d0;border-left:4px solid #166534;border-radius:8px;padding:14px 16px;">
+              <div style="font-size:11px;font-weight:700;color:#166534;margin-bottom:6px;">💬 Key Insight from Bot Feedback</div>
+              <div style="font-size:13px;color:var(--light);line-height:1.7;">No single fix is enough — layer oversampling, class weighting, and better metrics together. Aggressive oversampling without augmentation risks overfitting on repeated minority samples.</div>
+            </div>
+          </div>
+
+          <!-- SLIDE 3 -->
+          <div id="slide-3" class="scenario-slide" style="display:none;">
+            <div style="background:linear-gradient(135deg,#4c1d95 0%,#6d28d9 100%);border-radius:10px;padding:24px 28px;color:#fff;margin-bottom:12px;">
+              <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+                <div style="width:44px;height:44px;border-radius:10px;background:rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">🔒</div>
+                <div>
+                  <div style="font-size:10px;letter-spacing:2px;color:#c4b5fd;text-transform:uppercase;font-weight:700;margin-bottom:3px;">Scenario 03 · Data Privacy &amp; Ethics</div>
+                  <div style="font-size:17px;font-weight:700;font-family:'Merriweather',serif;line-height:1.25;">Privacy, Fairness &amp; Ethics in ML Model Development</div>
+                </div>
+              </div>
+              <div style="font-size:13px;color:rgba(255,255,255,0.7);line-height:1.7;margin-bottom:18px;">Building an ML model on personal user data raises questions of consent, minimization, bias monitoring, and regulatory compliance throughout the full development lifecycle.</div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+                <div style="background:rgba(255,255,255,0.08);border-radius:8px;padding:12px 14px;">
+                  <div style="font-size:10px;color:#c4b5fd;font-weight:700;letter-spacing:1px;margin-bottom:6px;">⚡ APPROACH</div>
+                  <div style="font-size:12.5px;color:rgba(255,255,255,0.85);line-height:1.6;">Transparency &amp; informed consent from day one; collect only necessary data; encrypt and anonymize PII; conduct regular fairness audits across groups.</div>
+                </div>
+                <div style="background:rgba(255,255,255,0.08);border-radius:8px;padding:12px 14px;">
+                  <div style="font-size:10px;color:#c4b5fd;font-weight:700;letter-spacing:1px;margin-bottom:6px;">🔧 SAFEGUARDS</div>
+                  <div style="font-size:12.5px;color:rgba(255,255,255,0.85);line-height:1.6;">Regulatory compliance (GDPR-style); pseudonymization; human oversight layer; diverse review teams to surface bias that technical audits miss.</div>
+                </div>
+              </div>
+            </div>
+            <div style="background:#faf5ff;border:1px solid #ddd6fe;border-left:4px solid #6d28d9;border-radius:8px;padding:14px 16px;">
+              <div style="font-size:11px;font-weight:700;color:#4c1d95;margin-bottom:6px;">💬 Key Insight from Bot Feedback</div>
+              <div style="font-size:13px;color:var(--light);line-height:1.7;">Responsible AI is continuous, not a checklist. Simplified consent language and visual explanations improve genuine user understanding. Diverse review teams surface issues that pure technical auditing cannot.</div>
+            </div>
+          </div>
+
+          <!-- Navigation arrows -->
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:14px;">
+            <button onclick="showSlide(Math.max(1,currentSlide-1))" style="background:var(--light-gold);border:1px solid var(--border);border-radius:7px;padding:8px 20px;font-size:13px;font-weight:600;color:var(--navy);cursor:pointer;font-family:'Source Sans 3',sans-serif;">← Previous</button>
+            <span id="slide-counter" style="font-size:12px;color:var(--muted);">Slide 1 of 3</span>
+            <button onclick="showSlide(Math.min(3,currentSlide+1))" style="background:var(--navy);border:none;border-radius:7px;padding:8px 20px;font-size:13px;font-weight:600;color:#fff;cursor:pointer;font-family:'Source Sans 3',sans-serif;">Next →</button>
+          </div>
+        </div>
+
+        <div class="art-tags">
+          <span class="art-tag">Missing Data</span><span class="art-tag">Class Imbalance</span>
+          <span class="art-tag">Data Privacy</span><span class="art-tag">Ethics in AI</span>
+          <span class="art-tag">Imputation</span><span class="art-tag">SMOTE</span>
+          <span class="art-tag">Fairness Metrics</span><span class="art-tag">School AI Bot</span>
+        </div>
+
+        <div class="optvp-grid">
+          <div class="optvp-item">
+            <div class="optvp-label">🎯 Objective</div>
+            <div class="optvp-text">Demonstrate applied knowledge of three core ML data challenges through a structured AI-facilitated scenario discussion, connecting theory to real-world problem solving.</div>
+          </div>
+          <div class="optvp-item">
+            <div class="optvp-label">⚙️ Format</div>
+            <div class="optvp-text">Interactive dialogue with the AIML-500 school chatbot. Each scenario required identifying the challenge, selecting a strategy, and justifying the reasoning in plain language.</div>
+          </div>
+          <div class="optvp-item">
+            <div class="optvp-label">🛠️ Skills Demonstrated</div>
+            <div class="optvp-text">Data preprocessing strategy, bias awareness, fairness evaluation (F1, precision, recall), regulatory awareness (GDPR-style frameworks), and responsible AI principles.</div>
+          </div>
+          <div class="optvp-item">
+            <div class="optvp-label">💡 Value Proposition</div>
+            <div class="optvp-text">Shows ability to reason critically across the full ML data pipeline — from raw data quality through deployment ethics — an essential competency for AI integration leadership.</div>
+          </div>
+        </div>
+      </div>
+      <div class="art-card-footer">
+        <span style="font-size:13px;color:var(--muted);">&#128172; AIML-500 School Bot Interaction &nbsp;&middot;&nbsp; 3 Scenarios Completed</span>
+      </div>
+    </div>
+
   <footer>
     <strong>Arvinnd K</strong> &nbsp;&middot;&nbsp; AIML-500 — AI/ML Integration Leadership &nbsp;&middot;&nbsp; 2026
   </footer>
@@ -616,6 +767,23 @@
 
 <script>
   // ── NAVIGATION ──
+  // ── Artifact 04 slide navigation ────────────────────────────────────────
+  var currentSlide = 1;
+  function showSlide(n) {
+    currentSlide = n;
+    [1,2,3].forEach(function(i) {
+      var s = document.getElementById('slide-' + i);
+      var d = document.getElementById('dot-' + i);
+      if (s) s.style.display = (i === n) ? 'block' : 'none';
+      if (d) {
+        d.style.background = (i === n) ? 'var(--navy)' : 'var(--border)';
+        d.style.color       = (i === n) ? '#c9a84c'    : 'var(--navy)';
+      }
+    });
+    var ctr = document.getElementById('slide-counter');
+    if (ctr) ctr.textContent = 'Slide ' + n + ' of 3';
+  }
+
   function goTo(name) {
     document.querySelectorAll('.page').forEach(function(p) { p.classList.remove('active'); });
     document.querySelectorAll('.nav-btn').forEach(function(b) { b.classList.remove('active'); });
