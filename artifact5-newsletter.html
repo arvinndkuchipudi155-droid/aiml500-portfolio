@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Microsoft × Constellation Energy — Energy & Technology Insider</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink: #0f0e0d;
+    --paper: #f5f0e8;
+    --cream: #ede6d6;
+    --accent: #c0392b;
+    --accent2: #1a3a5c;
+    --gold: #b8860b;
+    --rule: #2c2c2c;
+    --muted: #5a5348;
+    --col-gap: 2rem;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  /* ─── MASTHEAD ─────────────────────────────── */
+  .masthead {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 0.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .masthead-tag { opacity: 0.55; }
+
+  .flag {
+    background: var(--ink);
+    color: var(--paper);
+    text-align: center;
+    padding: 2.5rem 2rem 1.5rem;
+    border-bottom: 4px solid var(--accent);
+    position: relative;
+  }
+  .flag::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: rgba(245,240,232,0.15);
+    margin-top: 1.5rem;
+  }
+  .edition-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    display: block;
+  }
+  .flag h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3.8rem);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    max-width: 760px;
+    margin: 0 auto 0.5rem;
+  }
+  .flag h1 em {
+    font-style: italic;
+    color: var(--gold);
+  }
+  .flag .deck {
+    font-family: 'Source Serif 4', serif;
+    font-size: 1rem;
+    font-weight: 300;
+    color: rgba(245,240,232,0.75);
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  /* ─── STATS BAR ──────────────────────────────── */
+  .stats-bar {
+    background: var(--accent2);
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: 3px solid var(--gold);
+  }
+  .stat-cell {
+    padding: 1.2rem 1.5rem;
+    text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.1);
+    transition: background 0.2s;
+  }
+  .stat-cell:last-child { border-right: none; }
+  .stat-cell:hover { background: rgba(255,255,255,0.07); }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--gold);
+    display: block;
+    line-height: 1;
+  }
+  .stat-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.75;
+    margin-top: 0.3rem;
+    display: block;
+  }
+
+  /* ─── LAYOUT ────────────────────────────────── */
+  .broadsheet {
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 0 1.5rem 4rem;
+  }
+
+  /* ─── SECTION DIVIDERS ──────────────────────── */
+  .section-rule {
+    border: none;
+    border-top: 2px solid var(--rule);
+    margin: 2rem 0 1.2rem;
+    position: relative;
+  }
+  .section-rule .label {
+    position: absolute;
+    top: -0.7rem;
+    left: 0;
+    background: var(--paper);
+    padding: 0 0.6rem 0 0;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* ─── LEAD STORY (3-COL) ───────────────────── */
+  .lead-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--col-gap);
+    padding-top: 1.5rem;
+    border-top: 3px double var(--rule);
+    margin-top: 1.5rem;
+  }
+
+  .story-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 0.8rem;
+    letter-spacing: -0.02em;
+  }
+  .story-headline.large {
+    font-size: 2rem;
+  }
+  .byline {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid #ccc;
+  }
+  p { margin-bottom: 0.9rem; }
+  p:last-child { margin-bottom: 0; }
+
+  /* ─── PULL QUOTE ────────────────────────────── */
+  .pull-quote {
+    border-top: 2px solid var(--accent);
+    border-bottom: 2px solid var(--accent);
+    padding: 1rem 0;
+    margin: 1.2rem 0;
+  }
+  .pull-quote p {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-style: italic;
+    line-height: 1.4;
+    margin: 0 0 0.4rem;
+  }
+  .pull-quote cite {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-style: normal;
+  }
+
+  /* ─── SIDEBAR ──────────────────────────────── */
+  .sidebar {
+    padding-left: 1.5rem;
+    border-left: 1px solid #ccc;
+  }
+  .sidebar-card {
+    background: var(--cream);
+    border: 1px solid #d5cfc2;
+    padding: 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+  .sidebar-card h3 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.6rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid #c5bfb2;
+  }
+  .sidebar-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  .sidebar-card ul {
+    padding-left: 1rem;
+    font-size: 0.85rem;
+  }
+  .sidebar-card ul li { margin-bottom: 0.3rem; }
+
+  .checkmark-list { list-style: none; padding: 0; }
+  .checkmark-list li {
+    font-size: 0.85rem;
+    padding: 0.25rem 0;
+    padding-left: 1.4rem;
+    position: relative;
+  }
+  .checkmark-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent2);
+    font-weight: bold;
+  }
+
+  /* ─── TIMELINE ─────────────────────────────── */
+  .timeline-strip {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 1.5rem;
+    margin: 2rem 0;
+  }
+  .timeline-strip h3 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+  .tl-row {
+    display: flex;
+    gap: 0;
+    position: relative;
+  }
+  .tl-row::before {
+    content: '';
+    position: absolute;
+    top: 1.1rem;
+    left: 1.2rem;
+    right: 1.2rem;
+    height: 2px;
+    background: rgba(184,134,11,0.4);
+    z-index: 0;
+  }
+  .tl-item {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  .tl-dot {
+    width: 10px; height: 10px;
+    background: var(--gold);
+    border-radius: 50%;
+    margin: 0 auto 0.6rem;
+    border: 2px solid var(--ink);
+    box-shadow: 0 0 0 2px var(--gold);
+  }
+  .tl-year {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--gold);
+    display: block;
+  }
+  .tl-desc {
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.7rem;
+    color: rgba(245,240,232,0.65);
+    margin-top: 0.25rem;
+    line-height: 1.3;
+  }
+
+  /* ─── 3-COL INDUSTRY ──────────────────────── */
+  .three-col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--col-gap);
+    padding-top: 1.2rem;
+  }
+  .col-story { }
+  .col-story .story-headline { font-size: 1rem; }
+  .col-story p { font-size: 0.88rem; }
+
+  /* ─── RISK TABLE ──────────────────────────── */
+  .risk-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .risk-item {
+    padding: 0.8rem 1rem;
+    border-left: 3px solid var(--accent);
+    background: rgba(192,57,43,0.05);
+    font-size: 0.88rem;
+  }
+  .risk-item strong {
+    display: block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.2rem;
+  }
+
+  /* ─── IMPLICATIONS BOX ──────────────────── */
+  .implications-box {
+    background: var(--accent2);
+    color: white;
+    padding: 2rem;
+    margin: 2rem 0;
+  }
+  .implications-box h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+  .implications-box p {
+    font-size: 0.92rem;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.88);
+  }
+
+  /* ─── FOOTER ────────────────────────────── */
+  .footer-strip {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 1.5rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    align-items: start;
+    margin-top: 3rem;
+    font-size: 0.78rem;
+  }
+  .footer-strip .team-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.55rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.4rem;
+  }
+  .footer-strip .names {
+    color: rgba(245,240,232,0.7);
+    line-height: 1.8;
+    font-size: 0.8rem;
+  }
+  .footer-strip .source-note {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.55rem;
+    color: rgba(245,240,232,0.4);
+    text-align: right;
+    line-height: 1.9;
+    letter-spacing: 0.05em;
+  }
+
+  /* ─── BACK BUTTON ───────────────────────── */
+  .back-btn {
+    display: inline-block;
+    margin: 1rem 0;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    border: 1px solid #ccc;
+    padding: 0.4rem 0.8rem;
+    transition: all 0.2s;
+  }
+  .back-btn:hover {
+    background: var(--ink);
+    color: var(--paper);
+    border-color: var(--ink);
+  }
+
+  /* ─── RESPONSIVE ─────────────────────────── */
+  @media (max-width: 680px) {
+    .lead-grid { grid-template-columns: 1fr; }
+    .sidebar { padding-left: 0; border-left: none; border-top: 1px solid #ccc; padding-top: 1.5rem; }
+    .three-col { grid-template-columns: 1fr; }
+    .stats-bar { grid-template-columns: repeat(2, 1fr); }
+    .tl-row { flex-direction: column; gap: 1rem; }
+    .tl-row::before { display: none; }
+    .risk-grid { grid-template-columns: 1fr; }
+    .footer-strip { grid-template-columns: 1fr; }
+    .footer-strip .source-note { text-align: left; }
+  }
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<div class="masthead">
+  <span>Energy &amp; Technology Insider</span>
+  <span class="masthead-tag">March 2026 · Internal Briefing · Confidential</span>
+  <span>AIML-500 · Arvinnd K</span>
+</div>
+
+<!-- BACK LINK -->
+<div class="broadsheet" style="padding-bottom:0;">
+  <a href="index.html" class="back-btn">← Back to Portfolio</a>
+</div>
+
+<!-- FLAG / NAMEPLATE -->
+<div class="flag">
+  <span class="edition-label">Special Report · Energy × AI Infrastructure</span>
+  <h1>Microsoft × Constellation<br /><em>Nuclear Power Fuelling<br />the Future of AI</em></h1>
+  <p class="deck">How a 20-year, 835 MW power purchase agreement at Three Mile Island is rewriting the rules of corporate energy procurement — and what every AI leader needs to know.</p>
+</div>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stat-cell">
+    <span class="stat-num">835 MW</span>
+    <span class="stat-label">Carbon-Free Nuclear Power<br />for AI Data Centres</span>
+  </div>
+  <div class="stat-cell">
+    <span class="stat-num">20 Yrs</span>
+    <span class="stat-label">Power Purchase<br />Agreement Duration</span>
+  </div>
+  <div class="stat-cell">
+    <span class="stat-num">$16B</span>
+    <span class="stat-label">Pennsylvania GDP<br />Projected Contribution</span>
+  </div>
+  <div class="stat-cell">
+    <span class="stat-num">3,400</span>
+    <span class="stat-label">Jobs Created<br />Direct &amp; Indirect</span>
+  </div>
+</div>
+
+<!-- MAIN BROADSHEET -->
+<div class="broadsheet">
+
+  <!-- LEAD STORY -->
+  <div class="lead-grid">
+
+    <!-- LEFT: Main story columns -->
+    <div>
+      <hr class="section-rule"><span class="label">The Deal</span>
+
+      <h2 class="story-headline large">A Historic Agreement</h2>
+      <div class="byline">Constellation Energy · Microsoft · NRC · March 2026</div>
+
+      <p>In September 2024, Microsoft and Constellation Energy signed a landmark 20-year Power Purchase Agreement — Constellation's largest-ever — to restart Three Mile Island Unit 1 as the <strong>Crane Clean Energy Center</strong>. The deal delivers 835 MW of carbon-free nuclear power to Microsoft's mid-Atlantic AI data centres for two full decades.</p>
+
+      <p>The agreement directly supports Microsoft's commitment to become carbon negative by 2030 — a goal made harder by explosive AI infrastructure growth. It locks in guaranteed around-the-clock clean energy at a fixed price, providing long-term cost certainty alongside the environmental benefit.</p>
+
+      <div class="pull-quote">
+        <p>"Nuclear plants are the only energy sources that can consistently deliver carbon-free, 24/7 power."</p>
+        <cite>— Joe Dominguez, CEO, Constellation Energy</cite>
+      </div>
+
+      <hr class="section-rule"><span class="label">Background</span>
+      <h2 class="story-headline">From Infamy to Revival</h2>
+
+      <p>Three Mile Island is perhaps America's most recognised nuclear address. In 1979, Unit 2 suffered a partial core meltdown — the most serious accident in US nuclear history. Unit 1, an entirely separate reactor, was unaffected and continued operating safely for another four decades.</p>
+
+      <p>Unit 1 closed in 2019 — not for safety reasons, but because cheap natural gas made it uneconomical. The explosive growth of AI transformed that calculus entirely: hyperscale data centres need always-on, carbon-free power that renewables alone cannot reliably provide.</p>
+
+      <p>The plant was rechristened the <strong>Crane Clean Energy Center</strong> in honour of former Constellation CEO Chris Crane, who championed nuclear as a clean baseload solution long before AI made the argument mainstream.</p>
+
+      <hr class="section-rule"><span class="label">Why Nuclear?</span>
+      <h2 class="story-headline">The AI Energy Crisis</h2>
+
+      <p>Microsoft's emissions rose <strong>23.4%</strong> in fiscal year 2024, driven almost entirely by data centre expansion. Generative AI is extraordinarily power-hungry — training and running large language models demands uninterrupted electricity that strains conventional grid thinking.</p>
+
+      <p>Wind and solar, while vital, are intermittent. Data centres cannot tolerate gaps. Nuclear provides dense, reliable, carbon-free power every hour of every day regardless of weather or season — exactly what AI infrastructure requires.</p>
+
+      <p>Microsoft has pledged to match 100% of its consumption with carbon-free energy on an hourly basis by 2030. Certificates do not satisfy that standard. Only physical clean baseload generation does — and Three Mile Island Unit 1, fully licensed and sitting idle, was the most pragmatic solution available.</p>
+    </div>
+
+    <!-- RIGHT: Sidebar -->
+    <div class="sidebar">
+
+      <div class="sidebar-card">
+        <h3>Why This Deal Works</h3>
+        <ul class="checkmark-list">
+          <li>Carbon-free, 24/7 baseload supply</li>
+          <li>No new-build delays or cost overruns</li>
+          <li>20-year price certainty for Microsoft</li>
+          <li>Existing NRC licence framework in place</li>
+          <li>Grid-connected, mid-Atlantic location</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>Project Status</h3>
+        <h4>Ahead of Schedule</h4>
+        <p style="font-size:0.83rem">Restart now expected <strong>2027</strong> — one year ahead of the original 2028 target.</p>
+        <ul style="font-size:0.82rem; padding-left:1.1rem; margin-top:0.6rem;">
+          <li>500 staff on-site; 80%+ fully staffed</li>
+          <li>Steam generators &amp; turbines inspected</li>
+          <li>$35M contract for 3 new transformers</li>
+          <li>PJM grid interconnection approved</li>
+          <li>2nd reactor licensing class: early 2026</li>
+          <li>$200K+ in PA community donations (2025)</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>Corporate Strategy</h3>
+        <h4>A New Procurement Model</h4>
+        <p style="font-size:0.83rem">Rather than relying on renewable energy certificates, Microsoft is directly funding the physical revival of clean generation assets — creating <em>real additionality</em> at grid scale and setting a template competitors are already copying.</p>
+      </div>
+
+    </div>
+  </div><!-- /lead-grid -->
+
+  <!-- TIMELINE -->
+  <div class="timeline-strip">
+    <h3>Project Timeline</h3>
+    <div class="tl-row">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <span class="tl-year">2019</span>
+        <span class="tl-desc">TMI Unit 1 Closes</span>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <span class="tl-year">Sep 2024</span>
+        <span class="tl-desc">PPA Signed &amp; Announced</span>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="background:#e74c3c; box-shadow:0 0 0 2px #e74c3c;"></div>
+        <span class="tl-year">2025</span>
+        <span class="tl-desc">Ahead of Schedule</span>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <span class="tl-year">2027</span>
+        <span class="tl-desc">Target Restart</span>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <span class="tl-year">2054</span>
+        <span class="tl-desc">Licence Extended</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- INDUSTRY CONTEXT: 3 COLUMNS -->
+  <hr class="section-rule"><span class="label">Industry Context — Big Tech's Nuclear Race</span>
+  <div class="three-col">
+    <div class="col-story">
+      <h3 class="story-headline">Amazon secures 1.9 GW</h3>
+      <p>Amazon secured up to <strong>1.9 GW</strong> from Talen Energy's Susquehanna plant — the largest single nuclear offtake deal after the Microsoft agreement, signalling that cloud hyperscalers are now treating nuclear procurement as a competitive necessity.</p>
+    </div>
+    <div class="col-story">
+      <h3 class="story-headline">Google targets SMRs</h3>
+      <p>Google contracted Kairos Power for <strong>500 MW</strong> of Small Modular Reactor output — the first major corporate commitment to next-generation nuclear technology, betting that SMRs will be commercially viable before 2030.</p>
+    </div>
+    <div class="col-story">
+      <h3 class="story-headline">Meta preserves Clinton</h3>
+      <p>Meta signed a 20-year deal with Constellation to preserve the Clinton Clean Energy Center in Illinois — a plant scheduled for decommissioning in 2027 — demonstrating that demand-side commitments can extend the life of existing clean assets.</p>
+    </div>
+  </div>
+
+  <!-- PULL QUOTE - FULL WIDTH -->
+  <div class="pull-quote" style="margin: 2rem 0; padding: 1.2rem 0;">
+    <p style="font-size:1.3rem;">"It is delivering on two of our promises — reduce the cost of electricity and win the race in AI."</p>
+    <cite>— Christopher Wright, U.S. Secretary of Energy</cite>
+  </div>
+
+  <!-- RISKS -->
+  <hr class="section-rule"><span class="label">Risks &amp; Considerations</span>
+  <h2 class="story-headline">Headwinds to Monitor</h2>
+  <div class="risk-grid">
+    <div class="risk-item"><strong>Regulatory</strong>Full NRC regulatory approval still pending</div>
+    <div class="risk-item"><strong>Public Perception</strong>Community challenges around Three Mile Island history</div>
+    <div class="risk-item"><strong>Corporate Emissions</strong>Microsoft emissions rose 23% in FY2024 — deal must deliver</div>
+    <div class="risk-item"><strong>Cost Risk</strong>Nuclear historically prone to construction cost overruns</div>
+    <div class="risk-item"><strong>Policy</strong>Political headwinds could shift federal energy policy</div>
+    <div class="risk-item"><strong>Timeline</strong>2027 restart target is ahead of schedule but not guaranteed</div>
+  </div>
+
+  <!-- IMPLICATIONS -->
+  <div class="implications-box">
+    <h2>The Road Ahead — Implications for AI Leaders</h2>
+    <p>Microsoft has positioned itself as the first mover in a new model of corporate energy procurement — one that goes beyond certificates and directly funds the physical revival of clean baseload infrastructure. Competitors are already following, and the pace is accelerating.</p>
+    <p style="margin-top:0.8rem">For energy and technology professionals, the implications are clear: <strong>data centre siting will increasingly factor proximity to nuclear baseload</strong>, and long-term power purchase agreements will reshape capital allocation across the utility sector for decades to come. If the Crane Clean Energy Center restarts in 2027, it will mark the first time in US history that a decommissioned nuclear facility has returned to commercial service — a precedent that could unlock similar revivals at idled plants across the country.</p>
+    <p style="margin-top:0.8rem">Long-term, this may prove one of the most significant contributions of the AI era to decarbonisation: a <em>virtuous cycle</em> in which AI demand directly funds the clean energy infrastructure needed to sustain it responsibly.</p>
+  </div>
+
+</div><!-- /broadsheet -->
+
+<!-- FOOTER -->
+<div class="footer-strip broadsheet" style="max-width:100%; margin:0;">
+  <div>
+    <div class="team-label">Prepared by</div>
+    <div class="names">
+      Arvinnd Chowdary Kuchipudi &nbsp;·&nbsp; Won Woo Derek Sohn &nbsp;·&nbsp; Ashok Bollepalli &nbsp;·&nbsp; Manikanta Vasana<br />
+      Po-Chun Huang &nbsp;·&nbsp; Iftekhar Ahmed Tarkati Mohammed &nbsp;·&nbsp; Qasim Ali &nbsp;·&nbsp; Khaleel Abdul
+    </div>
+  </div>
+  <div class="source-note">
+    Energy &amp; Technology Insider · March 2026<br />
+    Sources: Constellation Energy · Microsoft · NRC · EIA<br />
+    For internal circulation only · AIML-500 · Indiana Wesleyan University
+  </div>
+</div>
+
+</body>
+</html>
