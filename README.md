@@ -36,7 +36,7 @@ This is a static GitHub Pages website; no build step is required. Paths are rela
 
 ## Existing links
 
-Previously shared homepage hashes such as `#model-development`, `#ml-fundamentals`, and `#artifacts` redirect to the corresponding course page. The former root newsletter address redirects to its new location. Original slide images, presentation, report, and report figures are stored with their respective artifacts.
+Previously shared homepage hashes such as `#model-development`, `#ml-fundamentals`, and `#artifacts` redirect to the corresponding course page. The newsletter is located at `ml-fundamentals/artifacts/energy-newsletter/newsletter.html`; its former root URL is retired. Original slide images, presentation, report, and report figures are stored with their respective artifacts.
 
 ## Reflections
 
