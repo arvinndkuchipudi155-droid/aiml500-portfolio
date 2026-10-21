@@ -170,6 +170,68 @@
       .nav-inner { padding: 0 16px; }
       .optvp-grid { grid-template-columns: 1fr; }
     }
+
+/* Course navigation and Model Development */
+.course-links{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:28px}
+.course-links a{padding:12px 18px;border:1px solid var(--navy);border-radius:6px;color:var(--navy);font-weight:600;text-decoration:none}
+.course-links a:hover{background:var(--navy);color:white}
+.nav-dropdown:focus-within .nav-dropdown-menu{display:block}
+.nav-btn:focus-visible,a:focus-visible,button:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #b8860b;outline-offset:3px}
+.model-body{max-width:1160px;margin:0 auto;padding:52px 28px 80px}
+.artifact-intro{max-width:800px;margin-bottom:32px}
+.artifact-eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:1.5px;color:#7a5b13;font-weight:700}
+.artifact-intro h2{font-family:Merriweather,Georgia,serif;font-size:32px;color:var(--navy);margin:12px 0}
+.artifact-intro p,.framework p,.artifact-writing p{font-size:16px;line-height:1.75;color:#454b57}
+.framework{background:#fff;border:1px solid var(--border);border-radius:12px;padding:32px}
+.framework-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:24px}
+.framework-heading h2{font-family:Merriweather,Georgia,serif;font-size:27px;color:var(--navy);margin:10px 0}
+.framework-heading .dl-btn{flex-shrink:0;font-size:13px;white-space:nowrap}
+.learning-map{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:28px 0 20px}
+.learning-map>div{padding:22px;background:#f5f3ed;border-top:4px solid var(--navy);border-radius:4px}
+.learning-map>div:nth-child(2){border-color:#297269}
+.learning-map>div:nth-child(3){border-color:#956d17}
+.map-step{font-size:12px;font-weight:700;color:#67501c;letter-spacing:2px}
+.learning-map h3{font-size:18px;color:var(--navy);margin:10px 0}
+.learning-map p{font-size:14px;margin-bottom:9px}
+.framework .framework-note{font-size:14px;border-left:3px solid var(--gold);padding-left:16px;margin:18px 0 28px}
+.framework-controls{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:24px 0}
+.framework-controls label{font-weight:600}
+.framework-controls select{padding:9px 12px;font:inherit;background:white;border:1px solid #a9a9a9;border-radius:5px}
+#algorithm-count{font-size:13px;color:#60636b;margin-left:auto}
+.algorithm-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.algorithm-card{border:1px solid #dce0e5;border-radius:8px;padding:24px;display:flex;flex-direction:column}
+.algorithm-card[hidden]{display:none}
+.algorithm-top{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:14px}
+.algorithm-number{color:#6b7280;font-size:12px;font-weight:700}
+.learning-tag{font-size:11px;padding:5px 8px;border-radius:4px;font-weight:600}
+.supervised{background:#eaf0ff;color:#243f78}.unsupervised{background:#e6f3ef;color:#21564e}.self{background:#faf0d5;color:#72520e}
+.algorithm-card h3{font-family:Merriweather,Georgia,serif;font-size:20px;color:var(--navy);margin-bottom:8px}
+.framework .algorithm-domains{font-size:12px;font-weight:600;color:#6c571b;margin-bottom:12px}
+.algorithm-card p{font-size:14px}
+.algorithm-example{margin-top:12px}
+.algorithm-example strong{display:block;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#646a73}
+.algorithm-task{font-size:12px;font-weight:600;color:#263855;margin-top:auto;padding-top:16px}
+.relationship-panel{margin-top:30px;padding-top:24px;border-top:1px solid var(--border)}
+.relationship-panel h3,.domain-matrix summary{font-size:20px;color:var(--navy);font-weight:700}
+.relationship-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:18px 0 28px}
+.relationship-grid p{font-size:14px}
+.domain-matrix{margin-top:24px}.domain-matrix summary{cursor:pointer;margin-bottom:14px}
+.domain-matrix p{font-size:14px;margin:12px 0}.matrix-scroll{overflow:auto}
+.domain-matrix table{width:100%;border-collapse:collapse;font-size:13px}
+.domain-matrix th,.domain-matrix td{padding:12px 10px;border:1px solid #e0e3e8}
+.domain-matrix thead th{background:var(--navy);color:white;font-size:12px;text-align:center}
+.domain-matrix thead th:first-child,.domain-matrix tbody th{text-align:left}
+.domain-matrix tbody th{font-weight:500}.domain-matrix td{text-align:center;color:#244e75}
+.domain-matrix tbody tr:nth-child(even){background:#f7f8fa}
+.artifact-writing{max-width:860px;margin:48px auto 0}
+.artifact-writing h2{font-family:Merriweather,Georgia,serif;font-size:27px;color:var(--navy);margin-bottom:24px}
+.artifact-writing h3{font-size:18px;margin:26px 0 10px;color:var(--navy)}
+.artifact-writing p{margin-bottom:14px}.framework-references{padding-left:22px}
+.framework-references li{font-size:14px;line-height:1.75;margin-bottom:12px}
+.framework-references a{color:#244e75;text-decoration:underline}
+@media(max-width:700px){.nav-inner{height:auto;min-height:58px;flex-wrap:wrap;padding:12px 16px;gap:5px}.nav-brand{width:100%;margin:0 0 5px}.nav-btn{padding:9px 10px;font-size:13px}.nav-dropdown-menu{min-width:200px}.model-body{padding:32px 16px 56px}.framework{padding:20px 16px}.framework-heading{flex-direction:column}.learning-map,.algorithm-grid,.relationship-grid{grid-template-columns:1fr}.artifact-intro h2{font-size:26px}.framework-heading h2{font-size:23px}#algorithm-count{margin-left:0}.hero-photo-caption{letter-spacing:1px}}
+@media print{nav,.framework-controls,.framework-heading .dl-btn,footer{display:none!important}.page{display:none!important}#page-model-development{display:block!important}.model-body{padding:0;max-width:none}.framework{border:none;padding:0}.algorithm-card{break-inside:avoid}.art-hero{padding:20px;background:white}.art-hero-title,.art-hero-sub{color:black}.art-hero::after{display:none}}
+
   </style>
 </head>
 <body>
@@ -180,7 +242,7 @@
     <div class="nav-brand" onclick="goTo('home')">Arvinnd <span>K</span></div>
     <button class="nav-btn active" id="nl-home" onclick="goTo('home')">Home</button>
     <div class="nav-dropdown">
-      <button class="nav-btn" id="nl-artifacts" onclick="goTo('artifacts')">Artifacts ▾</button>
+      <button class="nav-btn" id="nl-artifacts" onclick="goTo('artifacts')">ML Fundamentals ▾</button>
       <div class="nav-dropdown-menu">
         <button class="dropdown-item" onclick="goTo('artifacts');scrollToCard('card-timeline')">AI/ML Timeline</button>
         <button class="dropdown-item" onclick="goTo('artifacts');scrollToCard('card-chatbot')">Leadership Chatbot</button>
@@ -189,6 +251,7 @@
         <button class="dropdown-item" onclick="goTo('artifacts');scrollToCard('card-newsletter')">Energy Newsletter</button>
       </div>
     </div>
+    <button class="nav-btn" id="nl-model-development" onclick="goTo('model-development')">Model Development</button>
   </div>
 </nav>
 
@@ -199,7 +262,7 @@
     <div class="hero-tagline">Welcome to my Professional Portfolio</div>
     <div class="hero-photo-wrap">
       <img src="image_01.jpg" alt="Arvinnd K" class="hero-photo"/>
-      <div class="hero-photo-caption">AIML-500 &middot; Graduate Portfolio &middot; 2026</div>
+      <div class="hero-photo-caption">AI and Machine Learning &middot; Graduate Portfolio &middot; 2026</div>
     </div>
   </div>
 
@@ -207,45 +270,45 @@
     <h2 class="welcome-heading">Greetings and welcome to my portfolio.</h2>
     <div class="welcome-divider"></div>
     <p class="welcome-text">
-      Thank you for visiting. I'm <strong>Arvinnd K</strong>, and here you'll find a curated collection of
-      work from my graduate studies in <strong>AI/ML Integration Leadership (AIML-500)</strong> — a course
-      that bridges the technical world of artificial intelligence with the human dimensions of change management
-      and responsible leadership.<br/><br/>
-      This portfolio reflects my journey exploring how AI tools work, how to lead their adoption effectively,
-      and how to design them with empathy and ethics at the centre.
+      I'm <strong>Arvinnd Chowdary Kuchipudi</strong>, a software developer expanding my knowledge of artificial intelligence and machine learning through graduate study at Indiana Wesleyan University.
+      This portfolio brings together my work in <strong>ML Fundamentals</strong> and <strong>Model Development</strong>, connecting technical concepts with practical problem-solving and responsible AI.
     </p>
+    <h3 class="welcome-heading" style="font-size:21px;margin-top:32px">My professional value</h3>
+    <p class="welcome-text">I bring a software development perspective to understanding data, evaluating algorithm choices, and explaining technical decisions clearly. My goal is to help teams connect practical software solutions with thoughtful, evidence-based applications of AI.</p>
+    <div class="course-links"><a href="#ml-fundamentals" onclick="goTo('artifacts');return false">Explore ML Fundamentals</a><a href="#model-development" onclick="goTo('model-development');return false">Explore Model Development</a></div>
+
   </div>
 
   <div class="info-strip">
     <div class="info-strip-inner">
       <div class="info-item reveal">
         <div class="info-icon">🎓</div>
-        <div class="info-title">AIML-500</div>
-        <div class="info-desc">AI/ML Integration Leadership — a graduate course covering change management, ethical AI, and hands-on AI tool development.</div>
+        <div class="info-title">Graduate Learning</div>
+        <div class="info-desc">Coursework in ML Fundamentals and Model Development, from responsible AI adoption to understanding how models learn.</div>
       </div>
       <div class="info-item reveal" style="transition-delay:0.1s">
         <div class="info-icon">🤝</div>
-        <div class="info-title">Design Thinking</div>
-        <div class="info-desc">Every artifact was built using the five-stage Design Thinking framework — Empathy, Define, Ideate, Prototype, and Test.</div>
+        <div class="info-title">Practical Problem Solving</div>
+        <div class="info-desc">Approaches include design thinking, algorithm comparison, and clear communication of technical decisions for their intended audience.</div>
       </div>
       <div class="info-item reveal" style="transition-delay:0.2s">
         <div class="info-icon">🤖</div>
         <div class="info-title">AI-Powered Work</div>
-        <div class="info-desc">Artifacts include a working AI chatbot powered by Google Gemini and a professional AI history timeline presentation.</div>
+        <div class="info-desc">Explore a leadership chatbot, an AI history timeline, analytical reports, and a visual guide to machine learning algorithms.</div>
       </div>
     </div>
   </div>
 
   <footer>
-    <strong>Arvinnd K</strong> &nbsp;&middot;&nbsp; AIML-500 — AI/ML Integration Leadership &nbsp;&middot;&nbsp; 2026
+    <strong>Arvinnd K</strong> &nbsp;&middot;&nbsp; AI and Machine Learning Portfolio &nbsp;&middot;&nbsp; 2026
   </footer>
 </div>
 
 <!-- ARTIFACTS PAGE -->
 <div class="page" id="page-artifacts">
   <div class="art-hero">
-    <div class="art-hero-title">Artifacts</div>
-    <div class="art-hero-sub">AIML-500 &middot; Arvinnd K &middot; 2026</div>
+    <div class="art-hero-title">ML Fundamentals</div>
+    <div class="art-hero-sub">AIML-500 &middot; Course Artifacts &middot; 2026</div>
   </div>
 
   <div class="art-body">
@@ -684,7 +747,7 @@
     </div>
 
   <footer>
-    <strong>Arvinnd K</strong> &nbsp;&middot;&nbsp; AIML-500 — AI/ML Integration Leadership &nbsp;&middot;&nbsp; 2026
+    <strong>Arvinnd K</strong> &nbsp;&middot;&nbsp; AI and Machine Learning Portfolio &nbsp;&middot;&nbsp; 2026
   </footer>
 </div>
 
@@ -798,6 +861,73 @@
   </div>
 </div>
 
+
+<!-- MODEL DEVELOPMENT PAGE -->
+<div class="page" id="page-model-development">
+  <header class="art-hero"><h1 class="art-hero-title">Model Development</h1><p class="art-hero-sub">AIML-501 &middot; Arvinnd Chowdary Kuchipudi &middot; 2026</p></header>
+  <main class="model-body">
+    <div class="artifact-intro"><span class="artifact-eyebrow">Artifact 01 · Assignment 1.5</span><h2>Algorithm Types and Applications</h2><p>A visual framework for comparing ten machine learning algorithms and model families by learning approach, domain, and purpose.</p></div>
+    <section class="framework" id="algorithm-framework" aria-labelledby="framework-heading">
+      <div class="framework-heading"><div><span class="artifact-eyebrow">A practical field guide</span><h2 id="framework-heading">How models learn and what they do</h2><p>Learning style describes the training signal. Domain describes the data or application. Task describes the result. These are different dimensions, not competing categories.</p></div><button class="dl-btn" type="button" onclick="downloadFramework()">Download framework SVG</button></div>
+      <div class="learning-map">
+        <div><span class="map-step">01</span><h3>Learn from labeled examples</h3><p><strong>Supervised</strong> · Predict known targets.</p><p>Linear Regression · Decision Tree · Random Forest · Gradient Boosting · SVM · CNN classifier</p></div>
+        <div><span class="map-step">02</span><h3>Find structure without labels</h3><p><strong>Unsupervised</strong> · Discover patterns.</p><p>K-means groups examples. PCA compresses features. Neither directly learns fruit names.</p></div>
+        <div><span class="map-step">03</span><h3>Create targets from the data</h3><p><strong>Self-supervised</strong> · Learn representations or generation.</p><p>Transformers predict tokens. Diffusion models learn denoising. Later training may use labels or conditioning.</p></div>
+      </div>
+      <p class="framework-note"><strong>Read the labels carefully:</strong> CNN and Transformer describe architectures, not fixed learning styles. Here, CNN refers to supervised image classification. Self-supervision is often grouped under unsupervised learning because external task labels are not needed. Text-conditioned generation adds paired text information.</p>
+      <div class="framework-controls"><label for="domain-filter">Explore a domain</label><select id="domain-filter" onchange="filterAlgorithms(this.value)"><option value="all">All domains</option><option>Tabular Data</option><option>Computer Vision</option><option>NLP</option><option>Generative AI</option></select><span id="algorithm-count" aria-live="polite">10 algorithms and model families</span></div>
+      <div class="algorithm-grid"><article class="algorithm-card" data-domains="Tabular Data" data-learning="Supervised">
+<div class="algorithm-top"><span class="algorithm-number">01</span><span class="learning-tag supervised">Supervised</span></div>
+<h3>Linear Regression</h3><p class="algorithm-domains">Tabular Data</p><p>Fits a weighted linear relationship between features and a numeric target.</p><p class="algorithm-example"><strong>Example</strong> Estimate house prices from area, age, and location features.</p><div class="algorithm-task">Predict a number</div></article>
+<article class="algorithm-card" data-domains="Tabular Data" data-learning="Supervised">
+<div class="algorithm-top"><span class="algorithm-number">02</span><span class="learning-tag supervised">Supervised</span></div>
+<h3>Decision Tree</h3><p class="algorithm-domains">Tabular Data</p><p>Splits labeled examples using feature questions; leaves return a class or numeric estimate.</p><p class="algorithm-example"><strong>Example</strong> Classify fruit using extracted color and shape features.</p><div class="algorithm-task">Classify or predict</div></article>
+<article class="algorithm-card" data-domains="Tabular Data" data-learning="Supervised">
+<div class="algorithm-top"><span class="algorithm-number">03</span><span class="learning-tag supervised">Supervised</span></div>
+<h3>Random Forest</h3><p class="algorithm-domains">Tabular Data</p><p>Fits many randomized trees on resampled data and combines their predictions.</p><p class="algorithm-example"><strong>Example</strong> Predict customer churn from account and usage records.</p><div class="algorithm-task">Classify or predict</div></article>
+<article class="algorithm-card" data-domains="Tabular Data" data-learning="Supervised">
+<div class="algorithm-top"><span class="algorithm-number">04</span><span class="learning-tag supervised">Supervised</span></div>
+<h3>Gradient Boosting</h3><p class="algorithm-domains">Tabular Data</p><p>Adds models sequentially so each improves the current ensemble's loss.</p><p class="algorithm-example"><strong>Example</strong> Estimate insurance claim costs from policy features.</p><div class="algorithm-task">Classify or predict</div></article>
+<article class="algorithm-card" data-domains="Tabular Data · NLP · Computer Vision" data-learning="Supervised">
+<div class="algorithm-top"><span class="algorithm-number">05</span><span class="learning-tag supervised">Supervised</span></div>
+<h3>Support Vector Machine</h3><p class="algorithm-domains">Tabular Data · NLP · Computer Vision</p><p>Learns a maximum-margin boundary; kernels can represent nonlinear separation.</p><p class="algorithm-example"><strong>Example</strong> Detect spam using numerical features extracted from email text.</p><div class="algorithm-task">Classify</div></article>
+<article class="algorithm-card" data-domains="Tabular Data · Computer Vision" data-learning="Unsupervised">
+<div class="algorithm-top"><span class="algorithm-number">06</span><span class="learning-tag unsupervised">Unsupervised</span></div>
+<h3>K-means</h3><p class="algorithm-domains">Tabular Data · Computer Vision</p><p>Alternates assigning points to the nearest centroid and updating cluster means.</p><p class="algorithm-example"><strong>Example</strong> Group customers by purchasing behavior; quantize image colors.</p><div class="algorithm-task">Discover groups</div></article>
+<article class="algorithm-card" data-domains="Tabular Data · Computer Vision" data-learning="Unsupervised">
+<div class="algorithm-top"><span class="algorithm-number">07</span><span class="learning-tag unsupervised">Unsupervised</span></div>
+<h3>Principal Component Analysis</h3><p class="algorithm-domains">Tabular Data · Computer Vision</p><p>Projects centered numerical features onto orthogonal directions of greatest variance.</p><p class="algorithm-example"><strong>Example</strong> Compress correlated sensor measurements or image features.</p><div class="algorithm-task">Reduce dimensions</div></article>
+<article class="algorithm-card" data-domains="Computer Vision" data-learning="Supervised example">
+<div class="algorithm-top"><span class="algorithm-number">08</span><span class="learning-tag supervised">Supervised example</span></div>
+<h3>Convolutional Neural Network</h3><p class="algorithm-domains">Computer Vision</p><p>Learns local filters that build visual features across layers; a classifier maps them to labels.</p><p class="algorithm-example"><strong>Example</strong> Identify fruit species from labeled photographs.</p><div class="algorithm-task">Recognize images</div></article>
+<article class="algorithm-card" data-domains="NLP · Generative AI" data-learning="Self-supervised → supervised">
+<div class="algorithm-top"><span class="algorithm-number">09</span><span class="learning-tag self">Self-supervised → supervised</span></div>
+<h3>Transformer</h3><p class="algorithm-domains">NLP · Generative AI</p><p>Attention combines contextual token information. Next-token pretraining can be followed by labeled fine-tuning.</p><p class="algorithm-example"><strong>Example</strong> GPT-style text generation; fine-tuned BERT sentiment classification.</p><div class="algorithm-task">Understand or generate text</div></article>
+<article class="algorithm-card" data-domains="Generative AI · Computer Vision" data-learning="Unsupervised / self-supervised">
+<div class="algorithm-top"><span class="algorithm-number">10</span><span class="learning-tag unsupervised">Unsupervised / self-supervised</span></div>
+<h3>Diffusion Model</h3><p class="algorithm-domains">Generative AI · Computer Vision</p><p>Learns to reverse added noise; repeated denoising generates new samples.</p><p class="algorithm-example"><strong>Example</strong> Generate synthetic product images; text-conditioned variants use image-caption pairs.</p><div class="algorithm-task">Generate images</div></article></div>
+      <section class="relationship-panel"><h3>Connections that guide model selection</h3><div class="relationship-grid"><p><strong>One tree → many trees</strong><br>Decision Tree is the interpretable starting point. Random Forest combines randomized trees; Gradient Boosting builds a sequence of corrections.</p><p><strong>Groups ≠ components</strong><br>K-means assigns cluster membership. PCA creates fewer continuous features; it does not assign classes or clusters.</p><p><strong>Understanding ↔ generation</strong><br>Transformer representations support classification and generation with different objectives. Diffusion models generate through denoising, rather than next-token prediction.</p></div></section>
+      <details class="domain-matrix" open><summary>Compare application domains</summary><p>Dots mark the uses highlighted in this guide, not every possible use. Traditional models can work with features extracted from text or images.</p><div class="matrix-scroll"><table><thead><tr><th scope="col">Algorithm or family</th><th scope="col">Tabular Data</th><th scope="col">Computer Vision</th><th scope="col">NLP</th><th scope="col">Generative AI</th></tr></thead><tbody><tr><th scope="row">Linear Regression</th><td><span aria-label="Included">●</span></td><td><span aria-label="Not highlighted">—</span></td><td><span aria-label="Not highlighted">—</span></td><td><span aria-label="Not highlighted">—</span></td></tr><tr><th scope="row">Decision Tree</th><td><span aria-label="Included">●</span></td><td><span aria-label="Not highlighted">—</span></td><td><span aria-label="Not highlighted">—</span></td><td><span aria-label="Not highlighted">—</span></td></tr><tr><th scope="row">Random Forest</th><td><span aria-label="Included">●</span></td><td><span aria-label="Not highlighted">—</span></td><td><span aria-label="Not highlighted">—</span></td><td><span aria-label="Not highlighted">—</span></td></tr><tr><th scope="row">Gradient Boosting</th><td><span aria-label="Included">●</span></td><td><span aria-label="Not highlighted">—</span></td><td><span aria-label="Not highlighted">—</span></td><td><span aria-label="Not highlighted">—</span></td></tr><tr><th scope="row">Support Vector Machine</th><td><span aria-label="Included">●</span></td><td><span aria-label="Included">●</span></td><td><span aria-label="Included">●</span></td><td><span aria-label="Not highlighted">—</span></td></tr><tr><th scope="row">K-means</th><td><span aria-label="Included">●</span></td><td><span aria-label="Included">●</span></td><td><span aria-label="Not highlighted">—</span></td><td><span aria-label="Not highlighted">—</span></td></tr><tr><th scope="row">Principal Component Analysis</th><td><span aria-label="Included">●</span></td><td><span aria-label="Included">●</span></td><td><span aria-label="Not highlighted">—</span></td><td><span aria-label="Not highlighted">—</span></td></tr><tr><th scope="row">Convolutional Neural Network</th><td><span aria-label="Not highlighted">—</span></td><td><span aria-label="Included">●</span></td><td><span aria-label="Not highlighted">—</span></td><td><span aria-label="Not highlighted">—</span></td></tr><tr><th scope="row">Transformer</th><td><span aria-label="Not highlighted">—</span></td><td><span aria-label="Not highlighted">—</span></td><td><span aria-label="Included">●</span></td><td><span aria-label="Included">●</span></td></tr><tr><th scope="row">Diffusion Model</th><td><span aria-label="Not highlighted">—</span></td><td><span aria-label="Included">●</span></td><td><span aria-label="Not highlighted">—</span></td><td><span aria-label="Included">●</span></td></tr></tbody></table></div></details>
+    </section>
+    <section class="artifact-writing" aria-labelledby="artifact-details"><h2 id="artifact-details">About this artifact</h2>
+      <h3>Introduction and description</h3><p>This guide introduces common algorithm choices across tabular data, computer vision, natural language processing, and generative AI. It combines a learning-style map, ten concise profiles, and a domain comparison matrix so learners can compare methods without confusing a task with its training approach. Examples illustrate potential uses; they are not claims of models implemented or evaluated here.</p>
+      <h3>Objective</h3><p>Explain how ten algorithms and model families work, classify their representative learning approaches, and connect them to practical applications. The intended audience is students and software practitioners beginning model selection.</p>
+      <h3>Process and classification rationale</h3><p>I organized the framework along three axes. First, I identified whether the selected training example uses external labels, discovers structure without labels, or creates its own targets. Second, I mapped each method to representative domains. Third, I identified whether its output is a prediction, group, representation, or newly generated content. I checked the distinctions against official documentation and original research.</p><p>I kept architectures separate from learning styles in the explanations: a CNN classifier is supervised in this example, while a Transformer can be pretrained with self-supervision and then fine-tuned with labeled data. Unconditional diffusion learns from noise-corrupted data without external class labels; caption-conditioned variants incorporate paired information. Domain tags overlap intentionally because one algorithm can serve several applications. This avoids presenting generative AI and NLP as mutually exclusive branches.</p>
+      <h3>Tools and technologies used</h3><p>HTML, CSS, JavaScript, SVG, GitHub, and GitHub Pages provide the framework, domain filtering, downloadable visual, version control, and portfolio presentation. ChatGPT assisted with content drafting and implementation. Technical sources are listed below; this artifact is a reference framework rather than an executable ML experiment.</p>
+      <h3>Value proposition</h3><p>The guide helps a learner start with the problem, available training signal, and desired output before selecting an algorithm. It makes the reasoning behind a shortlist visible rather than encouraging selection by model name alone.</p>
+      <h3>Unique value</h3><p>The learning map and domain matrix combine a conceptual overview with concrete examples. Explicit treatment of self-supervision explains why modern generative systems do not fit neatly into a single permanent supervised or unsupervised label.</p>
+      <h3>Relevance</h3><p>For Model Development, this artifact supports the early decisions that precede training and evaluation. For software teams, it provides an accessible starting point for discussing requirements, data preparation, and tradeoffs with colleagues.</p>
+      <h3>References</h3><ol class="framework-references">
+      <li>Scikit-learn developers. (n.d.). <a href="https://scikit-learn.org/stable/supervised_learning.html">Supervised learning</a>. Official user guide.</li>
+      <li>Scikit-learn developers. (n.d.). <a href="https://scikit-learn.org/stable/unsupervised_learning.html">Unsupervised learning</a>. Official user guide.</li>
+      <li>LeCun, Y., Bottou, L., Bengio, Y., &amp; Haffner, P. (1998). <a href="https://doi.org/10.1109/5.726791">Gradient-based learning applied to document recognition</a>. Proceedings of the IEEE, 86(11), 2278–2324.</li>
+      <li>Vaswani, A., et al. (2017). <a href="https://arxiv.org/abs/1706.03762">Attention is all you need</a>. Advances in Neural Information Processing Systems.</li>
+      <li>Devlin, J., Chang, M.-W., Lee, K., &amp; Toutanova, K. (2019). <a href="https://aclanthology.org/N19-1423/">BERT: Pre-training of deep bidirectional transformers for language understanding</a>. NAACL-HLT.</li>
+      <li>Ho, J., Jain, A., &amp; Abbeel, P. (2020). <a href="https://arxiv.org/abs/2006.11239">Denoising diffusion probabilistic models</a>. Advances in Neural Information Processing Systems.</li></ol>
+    </section>
+  </main><footer><strong>Arvinnd K</strong> &middot; AI and Machine Learning Portfolio &middot; 2026</footer>
+</div>
+
 <!-- CHATBOT MODAL -->
 <div id="cb-modal" onclick="if(event.target===this)closeChatbot()" style="display:none;position:fixed;inset:0;z-index:999;background:rgba(0,0,0,0.7);align-items:center;justify-content:center;padding:20px;">
   <div style="width:100%;max-width:520px;background:#0f1724;border-radius:18px;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,0.6);display:flex;flex-direction:column;max-height:90vh;">
@@ -862,6 +992,8 @@
     document.getElementById('nl-' + name).classList.add('active');
     window.scrollTo({ top: 0 });
     setTimeout(initReveals, 80);
+    var hash = name === 'artifacts' ? 'ml-fundamentals' : name;
+    if (window.location.hash !== '#' + hash) history.replaceState(null, '', '#' + hash);
   }
   function scrollToCard(id) {
     setTimeout(function() {
@@ -1048,6 +1180,70 @@
   }
   document.getElementById('m-key-input').addEventListener('keydown', function(e) { if (e.key === 'Enter') mValidateKey(); });
   document.getElementById('m-input').addEventListener('keydown', function(e) { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); mSend(); } });
+
+  function filterAlgorithms(domain) {
+    var count = 0;
+    document.querySelectorAll('.algorithm-card').forEach(function(card) {
+      var show = domain === 'all' || card.dataset.domains.indexOf(domain) !== -1;
+      card.hidden = !show;
+      if (show) count++;
+    });
+    document.getElementById('algorithm-count').textContent = count + ' algorithms and model families';
+  }
+  function loadCourseFromHash() {
+    var route = window.location.hash.slice(1);
+    if (route === 'model-development') goTo('model-development');
+    else if (route === 'ml-fundamentals' || route === 'artifacts') goTo('artifacts');
+    else if (route === 'home') goTo('home');
+  }
+  window.addEventListener('hashchange', loadCourseFromHash);
+  loadCourseFromHash();
+  function downloadFramework() {
+    var data = [["Linear Regression","Supervised","Tabular Data","Fits a weighted linear relationship between features and a numeric target.","Estimate house prices from area, age, and location features.","Predict a number","linear"],["Decision Tree","Supervised","Tabular Data","Splits labeled examples using feature questions; leaves return a class or numeric estimate.","Classify fruit using extracted color and shape features.","Classify or predict","tree"],["Random Forest","Supervised","Tabular Data","Fits many randomized trees on resampled data and combines their predictions.","Predict customer churn from account and usage records.","Classify or predict","forest"],["Gradient Boosting","Supervised","Tabular Data","Adds models sequentially so each improves the current ensemble's loss.","Estimate insurance claim costs from policy features.","Classify or predict","boost"],["Support Vector Machine","Supervised","Tabular Data · NLP · Computer Vision","Learns a maximum-margin boundary; kernels can represent nonlinear separation.","Detect spam using numerical features extracted from email text.","Classify","svm"],["K-means","Unsupervised","Tabular Data · Computer Vision","Alternates assigning points to the nearest centroid and updating cluster means.","Group customers by purchasing behavior; quantize image colors.","Discover groups","kmeans"],["Principal Component Analysis","Unsupervised","Tabular Data · Computer Vision","Projects centered numerical features onto orthogonal directions of greatest variance.","Compress correlated sensor measurements or image features.","Reduce dimensions","pca"],["Convolutional Neural Network","Supervised example","Computer Vision","Learns local filters that build visual features across layers; a classifier maps them to labels.","Identify fruit species from labeled photographs.","Recognize images","cnn"],["Transformer","Self-supervised → supervised","NLP · Generative AI","Attention combines contextual token information. Next-token pretraining can be followed by labeled fine-tuning.","GPT-style text generation; fine-tuned BERT sentiment classification.","Understand or generate text","transformer"],["Diffusion Model","Unsupervised / self-supervised","Generative AI · Computer Vision","Learns to reverse added noise; repeated denoising generates new samples.","Generate synthetic product images; text-conditioned variants use image-caption pairs.","Generate images","diffusion"]];
+    function escapeXml(text) { return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+    function lines(text, length) {
+      var words = text.split(' '), result = [], line = '';
+      words.forEach(function(word) {
+        if ((line + ' ' + word).trim().length > length && line) { result.push(line); line = word; }
+        else line = (line + ' ' + word).trim();
+      });
+      if (line) result.push(line);
+      return result;
+    }
+    function textBlock(text, x, y, size, fill, maxChars, weight) {
+      return lines(text, maxChars).map(function(line, i) {
+        return '<text x="' + x + '" y="' + (y + i * (size + 7)) + '" font-family="Arial,sans-serif" font-size="' + size + '" fill="' + fill + '" font-weight="' + (weight || 'normal') + '">' + escapeXml(line) + '</text>';
+      }).join('');
+    }
+    var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="2530" viewBox="0 0 1400 2530"><rect width="1400" height="2530" fill="#fafaf8"/><rect width="1400" height="170" fill="#1a2744"/>';
+    svg += textBlock('Algorithm Types and Applications', 50, 65, 36, '#ffffff', 70, 'bold');
+    svg += textBlock('Arvinnd Chowdary Kuchipudi | Model Development AIML-501 | Assignment 1.5', 50, 112, 19, '#d4c9a8', 100);
+    svg += textBlock('Training signal + application domain + task: compare all three before choosing a model.', 50, 210, 21, '#1a2744', 110);
+    svg += textBlock('Supervised: external labels. Unsupervised: unlabeled structure. Self-supervised: targets created from data.', 50, 250, 18, '#454b57', 130);
+    data.forEach(function(a, i) {
+      var x = i % 2 === 0 ? 50 : 715, y = 300 + Math.floor(i / 2) * 355;
+      svg += '<rect x="' + x + '" y="' + y + '" width="635" height="330" rx="10" fill="#ffffff" stroke="#d1d7df"/>';
+      svg += textBlock(String(i + 1).padStart(2, '0') + '  ' + a[0], x + 24, y + 40, 23, '#1a2744', 43, 'bold');
+      svg += textBlock(a[1], x + 24, y + 78, 16, '#256258', 65, 'bold');
+      svg += textBlock(a[2], x + 24, y + 106, 15, '#72520e', 66);
+      svg += textBlock(a[3], x + 24, y + 143, 17, '#454b57', 61);
+      svg += textBlock('Example: ' + a[4], x + 24, y + 233, 16, '#454b57', 64);
+      svg += textBlock('Task: ' + a[5], x + 24, y + 305, 15, '#1a2744', 65, 'bold');
+    });
+    svg += textBlock('Key relationships', 50, 2110, 25, '#1a2744', 90, 'bold');
+    svg += textBlock('Decision Tree -> Random Forest combines randomized trees; Gradient Boosting adds corrections sequentially.', 50, 2150, 18, '#454b57', 125);
+    svg += textBlock('K-means groups examples; PCA reduces dimensions. Transformer generation predicts tokens; diffusion reverses noise.', 50, 2200, 18, '#454b57', 125);
+    svg += textBlock('CNN and Transformer are architectures. Learning labels describe the specific training examples shown here.', 50, 2250, 18, '#454b57', 125);
+    svg += textBlock('Self-supervision is often grouped under unsupervised learning. Text-conditioned diffusion uses image-caption pairs.', 50, 2300, 18, '#454b57', 125);
+    svg += textBlock('Sources: scikit-learn User Guide; LeCun et al. (1998); Vaswani et al. (2017); Devlin et al. (2019); Ho et al. (2020).', 50, 2370, 16, '#454b57', 140);
+    svg += textBlock('Full references and domain matrix: arvinndkuchipudi155-droid.github.io/aiml500-portfolio/#model-development', 50, 2430, 16, '#454b57', 140);
+    svg += '</svg>';
+    var url = URL.createObjectURL(new Blob([svg], {type: 'image/svg+xml;charset=utf-8'}));
+    var a = document.createElement('a'); a.href = url; a.download = 'Algorithm_Types_Framework.svg';
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(function() { URL.revokeObjectURL(url); }, 1000);
+  }
+
 </script>
 
 </body>
