@@ -271,3 +271,13 @@
   .model-course .featured-card .course-card-content{min-width:0;justify-content:center}
   .model-course .featured-card .course-card-content .dl-btn{margin-top:0}
 }
+
+/* Clear homepage course actions; each entire card remains one accessible link. */
+.path-copy>span.path-cta{
+  display:inline-flex;align-items:center;align-self:flex-start;gap:10px;
+  margin-top:12px;padding:11px 17px;min-height:44px;border-radius:7px;
+  background:var(--navy);color:#fff;font-size:14px;font-weight:600;
+  border:1px solid var(--navy);line-height:1.4
+}
+.path-copy>span.path-cta b{color:#e4c579;margin-left:0}
+.path-card:hover .path-cta,.path-card:focus-visible .path-cta{background:#2c4a8c;border-color:#2c4a8c}
