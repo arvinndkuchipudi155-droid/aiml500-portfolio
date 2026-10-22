@@ -258,3 +258,16 @@
 .card-topic-row{display:flex;flex-wrap:wrap;gap:8px;margin:-4px 0 22px}.card-topic-row span{font-size:12px;font-weight:600;color:#414b75;background:#eef0fb;border:1px solid #d7dbf2;border-radius:999px;padding:6px 10px}
 @media(max-width:760px){.path-grid{grid-template-columns:1fr}.path-media{height:168px}.featured-card{grid-template-columns:1fr}.featured-card .course-card-media{height:260px;min-height:0;border-right:0;border-bottom:1px solid rgba(26,39,68,.08)}.course-card-media{height:176px}.course-card-content{padding:23px 22px 25px}}
 @media(prefers-reduced-motion:reduce){.path-card,.path-media img,.course-page .course-card,.course-card-media>img{transition:none}}
+
+/* Keep the desktop feature preview independent of the infographic's tall aspect ratio. */
+@media (min-width:761px){
+  .model-course .featured-card{align-items:stretch}
+  .model-course .featured-card .framework-preview{height:390px;min-height:0}
+  .model-course .featured-card .framework-preview>img{
+    position:absolute;top:24px;left:24px;
+    width:calc(100% - 48px);height:calc(100% - 48px);
+    object-fit:cover;object-position:center top
+  }
+  .model-course .featured-card .course-card-content{min-width:0;justify-content:center}
+  .model-course .featured-card .course-card-content .dl-btn{margin-top:0}
+}
