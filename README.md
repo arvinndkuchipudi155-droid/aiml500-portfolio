@@ -41,3 +41,13 @@ Previously shared homepage hashes such as `#model-development`, `#ml-fundamental
 ## Reflections
 
 Course reflections are submitted privately through Brightspace and are not published in this repository.
+
+## Shared components
+
+- Edit `assets/templates/navigation.html` for the common menu, then run `node scripts/sync-components.cjs`. The generated HTML works without JavaScript.
+- Use `portfolio-button` for artifact actions. `assets/css/components.css` owns button, navigation, spacing, and responsive behavior.
+- Reuse `assets/icons.svg#download`, `#play`, `#arrow`, or `#document`; do not copy icon paths into pages.
+- Both presentations use `assets/js/slide-viewer.js` and `assets/css/slide-viewer.css`. Put each deck’s configuration in a `script[type="application/json"][data-portfolio-presentation]` element.
+- Page-specific styles belong in named files under `assets/css/`. The infographic, embedded slide artwork, and standalone newsletter retain their own content design.
+- Run `node scripts/validate.cjs` before publishing. When changing shared assets, update their versioned URLs so existing visitors receive the changes.
+

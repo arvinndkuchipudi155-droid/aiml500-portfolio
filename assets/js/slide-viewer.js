@@ -37,5 +37,15 @@
     return api;
   }
   window.PortfolioSlideViewer={create:create};
+  function initializePresentations(){
+    document.querySelectorAll('script[data-portfolio-presentation]').forEach(function(element){
+      if(element.dataset.initialized)return;
+      var config=JSON.parse(element.textContent);
+      create(config);element.dataset.initialized='true';
+    });
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initializePresentations,{once:true});
+  else initializePresentations();
 })();
+
 
