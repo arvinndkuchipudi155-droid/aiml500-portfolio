@@ -1,0 +1,12 @@
+/* Consistent heading and list rhythm for Artifact 03 and its explanation. */
+main h2 { margin: 36px 0 16px; }
+main h3 { margin: 24px 0 12px; }
+main ol, main ul {
+  margin: 0 0 24px;
+  padding-inline-start: 32px;
+  list-style-position: outside;
+}
+main li { margin: 0 0 12px; padding-inline-start: 4px; }
+main li:last-child { margin-bottom: 0; }
+details[open] > summary { margin-bottom: 24px; }
+details h2:first-of-type { margin-top: 24px; }
