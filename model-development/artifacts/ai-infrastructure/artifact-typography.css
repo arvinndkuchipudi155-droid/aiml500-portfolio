@@ -10,3 +10,27 @@ main li { margin: 0 0 12px; padding-inline-start: 4px; }
 main li:last-child { margin-bottom: 0; }
 details[open] > summary { margin-bottom: 24px; }
 details h2:first-of-type { margin-top: 24px; }
+
+/* Compact resource cards with consistent icons and an explicit budget row. */
+.resource-grid { gap: 16px; margin: 0 0 24px; align-items: stretch; }
+.resource-grid .resource-card {
+  --resource-accent: #167b6c;
+  margin: 0; padding: 18px 20px; min-height: 0;
+  border: 1px solid #dce5ed; border-left: 4px solid var(--resource-accent);
+  border-radius: 12px; background: #f7fafc;
+}
+.resource-grid .resource-compute { --resource-accent: #6450a4; }
+.resource-grid .resource-energy { --resource-accent: #946314; }
+.resource-grid .resource-time { --resource-accent: #2b6599; }
+.resource-head { display: flex; align-items: center; gap: 11px; margin-bottom: 12px; }
+.resource-grid .resource-head h3 { margin: 0; font-size: 19px; line-height: 1.3; color: #1a2744; }
+.resource-icon { display: inline-flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; border-radius: 9px; flex: none; background: white;
+  color: var(--resource-accent); border: 1px solid #dce5ed; }
+.resource-icon svg { width: 23px; height: 23px; }
+.resource-grid p { margin: 0; font-size: 15px; line-height: 1.6; }
+.resource-grid .resource-budget { margin-top: 9px; color: #33455d; }
+.resource-budget strong { color: var(--resource-accent); margin-right: 5px; }
+.resource-grid .resource-impact { margin-top: 9px; padding-top: 9px;
+  border-top: 1px solid #dce5ed; color: #526478; }
+@media (max-width:650px) { .resource-grid { gap: 12px; } .resource-grid .resource-card { padding: 16px; } }
